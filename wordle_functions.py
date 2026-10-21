@@ -18,11 +18,20 @@ def choose_word():
 
 
 def get_guess():
-#Gets and validates the player’s guess.
-    guess = input("Please enter your guess: ")
-    if len(guess) != 5:
-        print("Please enter a 5-letter word.")
+#Gets and validates the player’s guess. 
+    try:
+        guess = input("Please enter your guess: ")
+        guess = guess.lower()
+
+        if len(guess) != 5:
+                    print("Please enter a 5-letter word.")
+                    return get_guess()
+    except:
+        
+        print("An error occurred. Please try again. Enter a 5-letter word.")
         return get_guess()
+    
+    
     
     return guess
 
@@ -50,5 +59,6 @@ def display_guess(result, player_guess):
 def has_won(result):
 #Determines whether the player has guessed the word.
     if result == ["G", "G", "G", "G", "G"]:
+        
         return True
     return False
