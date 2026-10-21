@@ -6,13 +6,13 @@ import random
 def choose_word():
     #Selects and returns a secret word.
     wordle_words = [
-    "apple", "crane", "slate", "trace", "pride",
+    "crane", "slate", "trace", "pride",
     "shine", "globe", "brick", "plant", "storm",
     "light", "frame", "bread", "mouse", "chair",
     "dream", "cloud", "river", "stone", "flame",
     "grape", "smile", "beach", "crown", "heart",
     "lemon", "tiger", "zebra", "candy", "maple",
-    "frost", "quiet", "vivid", "ocean", "dance"
+    "frost", "quiet", "ocean", "dance"
     ]
     return random.choice(wordle_words)
 
