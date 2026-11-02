@@ -23,7 +23,7 @@ def get_guess():
         guess = input("Please enter your guess: ")
         guess = guess.lower()
 
-        if len(guess) != 5:
+        if len(guess) != 5 or not guess.isalpha():
                     print("Please enter a 5-letter word.")
                     return get_guess()
     except:

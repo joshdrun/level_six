@@ -22,7 +22,7 @@ while play_again:
 
         #Displays the current round and the player's guess with feedback.
         print(f"Round {i + 1}")
-        
+        wordle_functions.display_guess(result, player_guess)
         if wordle_functions.has_won(result):
                 print("Congratulations! You've won!")
                 did_win = True
